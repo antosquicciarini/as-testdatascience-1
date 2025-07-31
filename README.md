@@ -4,29 +4,7 @@ AS-TestDataScience-1
 Multiclass classification of forest cover type using the Forest Cover Type dataset (UCI). Includes EDA, preprocessing, model evaluation, and selection based on performance metrics. Fully structured and reproducible project.
 
 Project Organization
--------------
-
-This project uses an installable structure (with a `setup.py` and `src/` layout), allowing you to import modules without the `src.` prefix once installed.
-Installation
 ------------
-
-To make the `src` package importable from anywhere in the project (so you don't need to use `src.` in imports), install the project in editable mode:
-
-```bash
-pip install -e .
-```
-
-This will let you use imports like:
-
-```python
-from models.train_model import train_models
-```
-
-instead of:
-
-```python
-from src.models.train_model import train_models
-```
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -53,9 +31,9 @@ from src.models.train_model import train_models
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    ├── setup.py           <- Makes project pip installable (pip install -e .) so `src` can be imported
     ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    │   ├── __init__.py    <- Makes `src` a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
@@ -64,7 +42,7 @@ from src.models.train_model import train_models
     │   │   └── build_features.py
     │   │
     │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
+    │   │   │                 predictions
     │   │   ├── predict_model.py
     │   │   └── train_model.py
     │   │
@@ -73,7 +51,17 @@ from src.models.train_model import train_models
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
+Installation
+------------
 
---------
+To make the `src` package importable from anywhere in the project (so you don't need to use `src.` in imports), install the project in editable mode:
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+```bash
+pip install -e .
+```
+
+Then, install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
