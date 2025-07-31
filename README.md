@@ -1,67 +1,127 @@
-AS-TestDataScience-1
-==============================
+# AS-TestDataScience-1
 
-Multiclass classification of forest cover type using the Forest Cover Type dataset (UCI). Includes EDA, preprocessing, model evaluation, and selection based on performance metrics. Fully structured and reproducible project.
+**Multiclass classification of forest cover types** using the [Forest CoverType dataset (UCI)](https://archive.ics.uci.edu/dataset/31/covertype).  
+This project includes:
 
-Project Organization
-------------
+- 📊 Exploratory Data Analysis (EDA)
+- ⚙️ Feature engineering and preprocessing
+- 🧠 Model training and evaluation across multiple classifiers
+- 🔍 Dimensionality reduction for visualization
+- 📈 Performance comparison based on Accuracy, F1 Score, G-Mean, Recall, and Specificity
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- Makes project pip installable (pip install -e .) so `src` can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes `src` a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+The project is fully structured, reproducible, and built for experimentation and documentation via Sphinx.
 
-Installation
-------------
+---
 
-To make the `src` package importable from anywhere in the project (so you don't need to use `src.` in imports), install the project in editable mode:
+## 📁 Project Structure
+
+```
+├── LICENSE
+├── Makefile                <- Common project commands (e.g. `make data`, `make train`)
+├── README.md               <- This file
+├── data/                   <- Project data
+│   ├── raw/                <- Original immutable data
+│   ├── processed/          <- Cleaned data ready for modeling
+│   ├── interim/            <- Intermediate data
+│   └── external/           <- Third-party data
+├── docs/                   <- Sphinx documentation
+├── models/                 <- Trained models and outputs
+├── notebooks/              <- Jupyter notebooks (EDA, modeling, etc.)
+├── references/             <- External documentation or manuals
+├── reports/                <- Generated analysis (e.g. HTML, PDF)
+│   └── figures/            <- Visual assets for reports
+├── requirements.txt        <- Dependencies list
+├── setup.py                <- Package configuration for pip install
+├── test_environment.py     <- Python version check
+├── tox.ini                 <- Linting configuration
+└── src/                    <- Source code
+    ├── data/               <- Data processing scripts
+    ├── features/           <- Feature engineering
+    ├── models/             <- Training and evaluation logic
+    └── visualization/      <- Visualization scripts
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/as-testdatascience-1.git
+cd as-testdatascience-1
+```
+
+### 2. Set up the environment
+
+Install in editable mode to enable direct use of the `src/` module:
 
 ```bash
 pip install -e .
 ```
 
-Then, install the required dependencies:
+Then install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+### 3. Validate environment
+
+```bash
+python test_environment.py
+```
+
+---
+
+## 🛠 Usage
+
+### Download and prepare the data
+
+The covertype.ipynb does not need a separate data download 
+
+### Train models
+
+```bash
+python notebooks/covertype.ipynb
+```
+
+### Lint your code
+
+```bash
+make lint
+```
+
+---
+
+## 📚 Documentation
+
+Auto-generated using [Sphinx](https://www.sphinx-doc.org/).
+
+Build docs:
+
+```bash
+cd docs
+make html
+```
+
+Then open `docs/_build/html/index.html` in your browser.
+
+---
+
+## 🧪 Tests
+
+While this repo doesn't include formal unit tests yet, the `test_environment.py` ensures your Python version matches project requirements. Future updates may include `pytest`-based tests for individual modules.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Antonio Squicciarini**  
+2025
