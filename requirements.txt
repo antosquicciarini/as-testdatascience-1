@@ -18,6 +18,5 @@ xgboost
 jupyter
 mkdocs
 dotenv
-
-# local package
--e .
+bottleneck>=1.3.6
+srm

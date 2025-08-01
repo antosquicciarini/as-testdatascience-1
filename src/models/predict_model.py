@@ -13,7 +13,7 @@ def evaluate_models(trained_models, X_test, y_test):
     results = []
 
     for name, model in trained_models.items():
-        print(f"\n📌 Evaluating {name}")
+        print(f"\n-> Evaluating {name}")
         y_pred = model.predict(X_test)
 
         acc = accuracy_score(y_test, y_pred)
