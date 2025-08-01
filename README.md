@@ -82,6 +82,7 @@ The project is fully structured, reproducible, and built for experimentation and
    ```bash
    conda activate as-testdatascience-1
    ```
+   otherwise use virtual envirorment
 
 3. **Install dependencies**:
    ```bash
@@ -94,9 +95,7 @@ The project is fully structured, reproducible, and built for experimentation and
    ```
 
 5. **Run training**:
-   ```bash
-   python notebooks/energy_prediction.ipynb  # or run via Jupyter
-   ```
+   run notebooks/energy_prediction.ipynb via Jupyter
 
 6. **Build documentation** (optional):
    ```bash
