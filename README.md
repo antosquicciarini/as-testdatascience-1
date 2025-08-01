@@ -78,6 +78,11 @@ The project is fully structured, reproducible, and built for experimentation and
    make create_environment
    ```
 
+   If conda is available, then 
+   ```bash
+   conda activate as-testdatascience-1
+   ```
+
 3. **Install dependencies**:
    ```bash
    make requirements

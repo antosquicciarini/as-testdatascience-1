@@ -1,4 +1,3 @@
-import pandas as pd
 from setuptools import find_packages, setup
 
 setup(
