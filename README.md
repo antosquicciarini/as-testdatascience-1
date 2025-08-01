@@ -16,112 +16,137 @@ The project is fully structured, reproducible, and built for experimentation and
 ## 📁 Project Structure
 
 ```
-├── LICENSE
-├── Makefile                <- Common project commands (e.g. `make data`, `make train`)
-├── README.md               <- This file
-├── data/                   <- Project data
-│   ├── raw/                <- Original immutable data
-│   ├── processed/          <- Cleaned data ready for modeling
-│   ├── interim/            <- Intermediate data
-│   └── external/           <- Third-party data
-├── docs/                   <- Sphinx documentation
-├── models/                 <- Trained models and outputs
-├── notebooks/              <- Jupyter notebooks (EDA, modeling, etc.)
-├── references/             <- External documentation or manuals
-├── reports/                <- Generated analysis (e.g. HTML, PDF)
-│   └── figures/            <- Visual assets for reports
-├── requirements.txt        <- Dependencies list
-├── setup.py                <- Package configuration for pip install
-├── test_environment.py     <- Python version check
-├── tox.ini                 <- Linting configuration
-└── src/                    <- Source code
-    ├── data/               <- Data processing scripts
-    ├── features/           <- Feature engineering
-    ├── models/             <- Training and evaluation logic
-    └── visualization/      <- Visualization scripts
+├── LICENSE             <- MIT License.
+├── Makefile            <- Reproducible commands: make data, make train, etc.
+├── README.md           <- Project overview and instructions.
+├── models/             <- Trained models (.pth) and their training curves.
+├── notebooks/          <- Jupyter notebooks for analysis and training.
+├── reports/            <- Final reports and figures.
+├── requirements.txt    <- Python dependencies.
+├── setup.py            <- Installation script (`pip install -e .`)
+├── src/                <- All source code (data prep, features, models, viz).
+└── tox.ini             <- Linting rules.
 ```
+---
+
+## 📊 Dataset
+
+**Forest CoverType** ([UCI Repository](https://archive.ics.uci.edu/dataset/31/covertype)):
+
+- **Samples:** 581,012 forest observations
+- **Features:** 54 attributes (10 quantitative, 44 binary)
+- **Target:** Forest cover type (7 classes)
+- **Notes:** Clean dataset, but highly imbalanced classes
 
 ---
 
-## 🚀 Getting Started
+## 🧹 Pipeline Overview
 
-### 1. Clone the repository
+1. **Exploratory Data Analysis**
+   - Target distribution plots
+   - Correlation heatmaps
+   - PCA and t-SNE visualization
 
-```bash
-git clone https://github.com/your-username/as-testdatascience-1.git
-cd as-testdatascience-1
-```
+2. **Preprocessing**
+   - Feature scaling (StandardScaler)
+   - Train-test split with stratification
+   - Class imbalance analysis
 
-### 2. Set up the environment
+3. **Model Training**
+   - Random Forest
+   - Logistic Regression
+   - Gradient Boosting
+   - Optional: Neural Network classifiers
 
-Install in editable mode to enable direct use of the `src/` module:
-
-```bash
-pip install -e .
-```
-
-Then install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Validate environment
-
-```bash
-python test_environment.py
-```
+4. **Evaluation**
+   - Metrics: Accuracy, F1 Score, G-Mean, Recall, Specificity
+   - Confusion matrices
+   - Visual performance comparisons
 
 ---
 
-## 🛠 Usage
+## 🔧 Setup Instructions
 
-### Download and prepare the data
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/as-testdatascience-1.git
+    cd as-testdatascience-1
+    ```
 
-The covertype.ipynb does not need a separate data download 
+2. **Create and activate environment** (automated via `make`):
+   ```bash
+   make create_environment
+   ```
 
-### Train models
+3. **Install dependencies**:
+   ```bash
+   make requirements
+   ```
 
-```bash
-python notebooks/covertype.ipynb
-```
+4. **Validate environment setup**:
+   ```bash
+   make test_environment
+   ```
 
-### Lint your code
+5. **Run training**:
+   ```bash
+   python notebooks/energy_prediction.ipynb  # or run via Jupyter
+   ```
 
-```bash
-make lint
-```
+6. **Build documentation** (optional):
+   ```bash
+   cd docs
+   make html
+   ```
 
 ---
 
 ## 📚 Documentation
 
-Auto-generated using [Sphinx](https://www.sphinx-doc.org/).
-
-Build docs:
+To view documentation (optional):
 
 ```bash
 cd docs
 make html
+open _build/html/index.html
 ```
 
-Then open `docs/_build/html/index.html` in your browser.
+---
+
+## 🧪 Testing Your Environment
+
+Run:
+
+```bash
+python test_environment.py
+```
+
+to confirm your Python version is compatible.
 
 ---
 
-## 🧪 Tests
+## 🧪 Testing & Code Quality
 
-While this repo doesn't include formal unit tests yet, the `test_environment.py` ensures your Python version matches project requirements. Future updates may include `pytest`-based tests for individual modules.
+To ensure the code follows Python PEP8 style guidelines, you can run:
+
+```bash
+make lint
+```
+---
+
+## ⚙️ DevOps Readiness
+
+- Project structured with automation via Makefile
+- Environment reproducibility via requirements.txt and setup.py
+- Linting, testing, and documentation support (tox, flake8, Sphinx)
+- Models saved and ready for deployment in production systems
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**. See `LICENSE` for full details.
 
 ---
 
-## 👨‍💻 Author
-
-**Antonio Squicciarini**  
-2025
+<p><small>Project scaffolded with <a href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science</a>.</small></p>
