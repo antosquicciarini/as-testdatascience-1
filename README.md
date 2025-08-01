@@ -69,7 +69,7 @@ The project is fully structured, reproducible, and built for experimentation and
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/as-testdatascience-1.git
+    git clone https://github.com/antosquicciarini/as-testdatascience-1.git
     cd as-testdatascience-1
     ```
 
