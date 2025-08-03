@@ -1,0 +1,28 @@
+site_name: AS-TestDataScience-1
+site_description: Multiclass classification on Forest Cover Type (UCI)
+site_author: Antonio Squicciarini
+repo_url: https://github.com/antosquicciarini/as-testdatascience-1
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Dataset & Features: data-overview.md
+  - Models & Evaluation: models.md
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - footnotes
+  - tables
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
