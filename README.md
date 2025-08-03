@@ -45,7 +45,7 @@ The project is fully structured, reproducible, and built for experimentation and
 1. **Exploratory Data Analysis**
    - Target distribution plots
    - Correlation heatmaps
-   - PCA and t-SNE visualization
+   - PCA, t-SNE and UMAP visualization
 
 2. **Preprocessing**
    - Feature scaling (StandardScaler)
@@ -56,13 +56,9 @@ The project is fully structured, reproducible, and built for experimentation and
    - Random Forest
    - Logistic Regression
    - Gradient Boosting
-   - Optional: Neural Network classifiers
 
 4. **Evaluation**
-   - Metrics: Accuracy, F1 Score, G-Mean, Recall, Specificity
-   - Confusion matrices
-   - Visual performance comparisons
-
+   - Metrics: Accuracy, F1 Score, G-Mean, Recall, Specificity, Confusion matrices
 ---
 
 ## 🔧 Setup Instructions
