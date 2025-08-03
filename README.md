@@ -9,7 +9,7 @@ This project includes:
 - 🔍 Dimensionality reduction for visualization
 - 📈 Performance comparison based on Accuracy, F1 Score, G-Mean, Recall, and Specificity
 
-The project is fully structured, reproducible, and built for experimentation and documentation via Sphinx.
+The project is fully structured, reproducible, and built for experimentation and documentation via MkDocs.
 
 ---
 
@@ -92,6 +92,12 @@ The project is fully structured, reproducible, and built for experimentation and
 
 5. **Run training**:
    run notebooks/energy_prediction.ipynb via Jupyter
+
+6. **Serve MkDocs documentation locally**:
+   ```bash
+   mkdocs serve
+   ```
+   Then open `http://127.0.0.1:8000` in your browser to explore the documentation.
 
 ---
 
