@@ -35,8 +35,8 @@ The project is fully structured, reproducible, and built for experimentation and
 This MkDocs site provides structured technical documentation.  
 Additionally, the following resources are available for direct exploration:
 
-- ✅ **Executed Jupyter notebook** (interactive report): [`reports/covertype.html`](../reports/covertype.html)  
-- 🎞 **Presentation slides** (PDF format): [`reports/as_testdatascience_1.pdf`](../reports/as_testdatascience_1.pdf)
+- ✅ **Executed Jupyter notebook** (interactive report): [`reports/covertype.html`](reports/covertype.html)  
+- 🎞 **Presentation slides** (PDF format): [`reports/as_testdatascience_1.pdf`](reports/as_testdatascience_1.pdf)
 
 These files allow for quick visualization of results and core methods without running code manually.
 
