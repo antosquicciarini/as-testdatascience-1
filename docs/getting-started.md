@@ -55,18 +55,7 @@ Then open and execute:
 
     notebooks/covertype.ipynb
 
-## 🧹 Clean Temporary Files (Optional)
-
-    make clean
-
-Removes all compiled Python files and `__pycache__` folders.
-
 ## 📦 Extra Utilities
-
-You can also sync data with AWS S3 if configured:
-
-    make sync_data_to_s3
-    make sync_data_from_s3
 
 Or check code style:
 
